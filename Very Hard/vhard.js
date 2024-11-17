@@ -5,12 +5,12 @@ class Person {
 
 
     constructor (name, job, age){
-        this.name = name;
-        this.job = job;
-        this.age = age;
+        this.name = name; // The name of the person
+        this.job = job; // The job of the person
+        this.age = age; // The age of the person
     }
     exercise() {
-        console.log("Running is fun!" )
+        console.log("Running is fun! - said no one ever" )
     }
     
     fetchJob () {
@@ -21,8 +21,8 @@ class Person {
 
 class Programmer extends Person {
 
-    language = [];
-    busy;
+    language = []; // Holds the list of programming languages the programmer knows
+    busy; // Indicates whether the programmer is busy with tasks
 
 
     constructor(name, job, age, langauges){
@@ -32,13 +32,15 @@ class Programmer extends Person {
     }
 
     completeTask() {
-        this.busy = false;
+        this.busy = false; // Sets the 'busy' status to false when a task is completed
     }
 
 
-    acceptsNewTask() {}
-    //// Method to offer a new task and check if the programmer is busy
-    offerTask () {
+    acceptNewTask() { // Sets the 'busy' status to true when a new task is accepted
+        this.busy = true; 
+    }
+    // Method to offer a new task and check if the programmer is busy
+    offerNewTask () {
         if(this.busy === true) {
             console.log(`${this.name} can't accept any new task right now.`);
         } else {
@@ -54,10 +56,11 @@ class Programmer extends Person {
 
    //list all the languages the programmer knows
     listLanguage() {
-        return this.language;
+        return this.language; //returns the array of languages
     }
 }
 
+//the outputs and arrays
 const person1 = new Person("Brad", "Backend Engineer", 20);
 const c1 = new Programmer("Liana", "DevOps", 35, ["HTML", "C#", "LUA"]);
 const c2 = new Programmer("Edwin", "janitor", 55, ["HTML", "SASS”, ”Ruby"]);
