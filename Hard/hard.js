@@ -1,7 +1,7 @@
-function createPatient() { //a closure is function that returns another function
+function createPatient() { //a closure is a function that returns another function
     let PII = {
-        name: "Precious",
-        SSN: "222-444-5566"
+        name: "John",
+        SSN: "2123-45-6789"
     }
 
     return {
@@ -12,5 +12,5 @@ function createPatient() { //a closure is function that returns another function
 }
 
 const patient2 = createPatient();
-console.log(patient2.getName()); // Precious is the patient
+console.log(patient2.getName()); // John is the patient
 console.log(patient2.name); 

@@ -1,3 +1,4 @@
+//Create the Person constructor
 class Person {
 
 
@@ -34,7 +35,10 @@ class Programmer extends Person {
         this.busy = false;
     }
 
-    offerNewTask () {
+
+    acceptsNewTask() {}
+    //// Method to offer a new task and check if the programmer is busy
+    offerTask () {
         if(this.busy === true) {
             console.log(`${this.name} can't accept any new task right now.`);
         } else {
@@ -47,12 +51,14 @@ class Programmer extends Person {
         this.language.push(language); //this adds the language
     }
 
+
+   //list all the languages the programmer knows
     listLanguage() {
         return this.language;
     }
 }
 
-const person1 = new Person("Precious", "Backend Engineer", 24);
+const person1 = new Person("Brad", "Backend Engineer", 20);
 const c1 = new Programmer("Liana", "DevOps", 35, ["HTML", "C#", "LUA"]);
 const c2 = new Programmer("Edwin", "janitor", 55, ["HTML", "SASS”, ”Ruby"]);
 const c3 = new Programmer("Manny", "SysOps", 31,[("HTML", "CSS", "JS", "R")]);
